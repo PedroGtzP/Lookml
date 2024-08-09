@@ -41,31 +41,31 @@ view: lynden_aldergrove_northbound_prediction_1000 {
 
   #Metricas
   measure: confidence_interval_lower_bound_metric {
-    type: number
+    type: sum
     sql: ${TABLE}.confidence_interval_lower_bound ;;
   }
   measure: confidence_interval_upper_bound_metric {
-    type: number
+    type: sum
     sql: ${TABLE}.confidence_interval_upper_bound ;;
   }
   measure: confidence_level_metric {
-    type: number
+    type: sum
     sql: ${TABLE}.confidence_level ;;
   }
   measure: forecast_value_metric {
-    type: number
+    type: sum
     sql: ${TABLE}.forecast_value ;;
   }
   measure: prediction_interval_lower_bound_metric {
-    type: number
+    type: sum
     sql: ${TABLE}.prediction_interval_lower_bound ;;
   }
   measure: prediction_interval_upper_bound_metric {
-    type: number
+    type: sum
     sql: ${TABLE}.prediction_interval_upper_bound ;;
   }
   measure: standard_error_metric {
-    type: number
+    type: sum
     sql: ${TABLE}.standard_error ;;
   }
 
