@@ -22,6 +22,17 @@ explore: lynden_aldergrove_southbound_prediction_1000 {
 
   }
 
+  join: pasific_highway_northbound_prediction_1000 {
+    #from: eventos_911_data_us
+    sql_on: ${pasific_highway_northbound_prediction_1000.forecast_timestamp_time} = ${lynden_aldergrove_northbound_prediction_1000.forecast_timestamp_time} ;;
+    relationship: one_to_one
+    type:inner
+
+  }
+
+
+
+
 }
 
 explore: pasific_highway_northbound {}
