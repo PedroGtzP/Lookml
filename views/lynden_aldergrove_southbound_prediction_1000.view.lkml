@@ -37,7 +37,42 @@ view: lynden_aldergrove_southbound_prediction_1000 {
   dimension: standard_error {
     type: number
     sql: ${TABLE}.standard_error ;;
+
   }
+
+  #Measure
+
+  measure: confidence_interval_lower_bound_metric {
+    type: sum
+    sql: ${TABLE}.confidence_interval_lower_bound ;;
+  }
+  measure: confidence_interval_upper_bound_metric {
+    type: sum
+    sql: ${TABLE}.confidence_interval_upper_bound ;;
+  }
+  measure: confidence_level_metric {
+    type: sum
+    sql: ${TABLE}.confidence_level ;;
+  }
+  measure: forecast_value_metric {
+    type: sum
+    sql: ${TABLE}.forecast_value ;;
+  }
+  measure: prediction_interval_lower_bound_metric {
+    type: sum
+    sql: ${TABLE}.prediction_interval_lower_bound ;;
+  }
+  measure: prediction_interval_upper_bound_metric {
+    type: sum
+    sql: ${TABLE}.prediction_interval_upper_bound ;;
+  }
+  measure: standard_error_metric {
+    type: sum
+    sql: ${TABLE}.standard_error ;;
+  }
+
+
+
   measure: count {
     type: count
   }
