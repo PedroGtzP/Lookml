@@ -48,7 +48,10 @@ view: wait_time_us_border_cleaned {
     type: sum
     sql: ${TABLE}.Avg_Vehicles_In_Queue ;;
   }
-
+  measure: avg_delay_mteric_avg {
+    type: average
+    sql: ${TABLE}.Avg_Delay ;;
+  }
 
   measure: count {
     type: count
