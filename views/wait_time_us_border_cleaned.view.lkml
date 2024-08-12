@@ -35,6 +35,19 @@ view: wait_time_us_border_cleaned {
     type: string
     sql: ${TABLE}.Longitud ;;
   }
+  dimension: geo_location {
+    type: location
+    sql_latitude:${TABLE}.Latitud ;;
+    sql_longitude:${TABLE}.Longitud;;
+  }
+  measure: avg_delay_mteric {
+    type: number
+    sql: ${TABLE}.Avg_Delay ;;
+  }
+  measure: avg_vehicles_in_queue_metric {
+    type: number
+    sql: ${TABLE}.Avg_Vehicles_In_Queue ;;
+  }
 
 
   measure: count {
