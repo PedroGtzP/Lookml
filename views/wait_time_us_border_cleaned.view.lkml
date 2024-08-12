@@ -26,6 +26,17 @@ view: wait_time_us_border_cleaned {
     type: string
     sql: ${TABLE}.LaneType ;;
   }
+
+  dimension: Latitud {
+    type: string
+    sql: ${TABLE}.Latitud ;;
+  }
+  dimension: Longitud {
+    type: string
+    sql: ${TABLE}.Longitud ;;
+  }
+
+
   measure: count {
     type: count
   }
