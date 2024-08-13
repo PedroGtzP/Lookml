@@ -82,4 +82,6 @@ explore: wait_time_us_border {}
 explore: sumas_huntingdon_southbound_prediction_1000 {}
 
 explore: border_wait {}
+
+explore: real_clean {}
 explore: wait_time_us_border_cleaned{}
