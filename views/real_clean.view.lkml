@@ -26,6 +26,16 @@ view: real_clean {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.timestamp_example ;;
   }
+
+
+  measure: avg_delay_sum {
+    type: sum
+    sql: ${TABLE}.Avg_Delay ;;
+  }
+  measure: avg_vehicles_in_queue_sum {
+    type: sum
+    sql: ${TABLE}.Avg_Vehicles_In_Queue ;;
+  }
   measure: count {
     type: count
   }
