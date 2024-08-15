@@ -91,4 +91,56 @@ explore: la_s_prediciton {}
 explore: phw_n_prediction {}
 explore: phw_s_prediction {}
 explore: sh_n_prediction{}
-explore: sh_s_prediction {}
+explore: sh_s_prediction {
+
+
+  join: la_n_prediction {
+    #from: eventos_911_data_us
+    sql_on: ${la_n_prediction.forecast_timestamp_time} = ${sh_s_prediction.forecast_timestamp_time} ;;
+    relationship: one_to_one
+    type:inner
+
+  }
+
+  join: la_s_prediciton {
+    #from: eventos_911_data_us
+    sql_on: ${la_s_prediciton.forecast_timestamp_time} = ${sh_s_prediction.forecast_timestamp_time};;
+    relationship: one_to_one
+    type:inner
+
+  }
+
+  join: phw_n_prediction {
+    #from: eventos_911_data_us
+    sql_on: ${phw_n_prediction.forecast_timestamp_time} = ${sh_s_prediction.forecast_timestamp_time} ;;
+    relationship: one_to_one
+    type:inner
+
+  }
+
+  join: phw_s_prediction {
+    #from: eventos_911_data_us
+    sql_on: ${phw_s_prediction.forecast_timestamp_time} = ${sh_s_prediction.forecast_timestamp_time} ;;
+    relationship: one_to_one
+    type:inner
+
+  }
+  join: sh_n_prediction{
+    #from: eventos_911_data_us
+    sql_on: ${sh_n_prediction.forecast_timestamp_time} = ${sh_s_prediction.forecast_timestamp_time} ;;
+    relationship: one_to_one
+    type:inner
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+}
