@@ -38,6 +38,24 @@ view: la_n_prediction {
     type: number
     sql: ${TABLE}.standard_error ;;
   }
+
+
+  measure: forecast_value_sum {
+    type: sum
+    sql: ${TABLE}.forecast_value ;;
+  }
+  measure: prediction_interval_lower_bound_sum {
+    type: sum
+    sql: ${TABLE}.prediction_interval_lower_bound ;;
+  }
+  measure: prediction_interval_upper_bound_sum {
+    type: sum
+    sql: ${TABLE}.prediction_interval_upper_bound ;;
+  }
+
+
+
+
   measure: count {
     type: count
   }
