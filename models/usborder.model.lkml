@@ -85,3 +85,10 @@ explore: border_wait {}
 
 explore: real_clean {}
 explore: wait_time_us_border_cleaned{}
+
+explore: la_n_prediction {}
+explore: la_s_prediciton {}
+explore: phw_n_prediction {}
+explore: phw_s_prediction {}
+explore: sh_n_prediction{}
+explore: sh_s_prediction {}
