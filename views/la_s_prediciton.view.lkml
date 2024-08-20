@@ -1,5 +1,5 @@
 view: la_s_prediciton {
-  sql_table_name: `analytics1-307400.US_BORDER.la_s_prediciton` ;;
+  sql_table_name: `analytics1-307400.US_BORDER.la_s_prediction` ;;
 
   dimension: confidence_interval_lower_bound {
     type: number
