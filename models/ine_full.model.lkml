@@ -58,7 +58,36 @@ explore: fct_preg_r3 {}
 
 explore: grupo_etnico_dim {}
 
-explore: participacion_boleta_1 {}
+explore: participacion_boleta_1 {
+
+# Join con C_LENGUAJE para obtener la descripción del lenguaje
+  join: c_lenguaje {
+    type: left_outer
+    sql_on: ${participacion_boleta_1.id_detalle_consulta} = ${c_lenguaje.id_detalle_consulta}
+      AND ${participacion_boleta_1.id_lenguaje} = ${c_lenguaje.id_lenguaje} ;;
+    relationship: many_to_one # Una entrada de lenguaje para muchas participaciones
+  }
+
+  # Join con C_TIPO_BOLETA para obtener la descripción y rangos de edad de la boleta
+  join: c_tipo_boleta {
+    type: left_outer
+    sql_on: ${participacion_boleta_1.id_detalle_consulta} = ${c_tipo_boleta.id_detalle_consulta}
+      AND ${participacion_boleta_1.id_tipo_boletas} = ${c_tipo_boleta.id_tipo_boletas} ;;
+    relationship: many_to_one # Un tipo de boleta para muchas participaciones
+  }
+
+  # Join con C_TIPO_PARTICIPACION para obtener la descripción del tipo de participación
+  join: c_tipo_participacion {
+    type: left_outer
+    sql_on: ${participacion_boleta_1.id_tipo_participacion} = ${c_tipo_participacion.id_tipo_participacion} ;;
+    relationship: many_to_one # Un tipo de participación para muchas participaciones
+  }
+
+
+
+
+
+}
 
 explore: fct_preg_r1 {}
 
