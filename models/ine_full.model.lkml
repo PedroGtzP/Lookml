@@ -164,6 +164,7 @@ explore: respuestas_boleta_4 {
 }
 
 explore: respuestas_boleta_2 {}
+explore: respuestas_boleta {}
 
 explore: respuestas_boleta_3 {}
 
