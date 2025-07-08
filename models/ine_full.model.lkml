@@ -164,7 +164,17 @@ explore: respuestas_boleta_4 {
 }
 
 explore: respuestas_boleta_2 {}
-explore: respuestas_boleta {}
+explore: respuestas_boleta {
+
+  join: c_tipo_boleta {
+    type: inner
+    sql_on: ${respuestas_boleta.id_tipo_boletas} = ${c_tipo_boleta.id_tipo_boletas} ;;
+    relationship: many_to_one
+  }
+
+
+
+}
 
 explore: respuestas_boleta_3 {}
 
